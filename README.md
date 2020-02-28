@@ -12,13 +12,20 @@ Import this repo in your Azure DevOps project and replace the following placehol
 | `YOUR_FEED` | The Azure Artifacts NuGet feed (eg. nuget.example) |
 | `YOUR_DOMAIN` | Your domain (eg. example.com) |
 
-## Running in Azure DevOps Pipelines
+## Running in Azure DevOps Pipelines (nuget)
 
-After replacing the placeholders above, simply create a new pipeline for the imported repo. Use the `azure-pipelines.yaml` as the source for the pipeline.
+After replacing the placeholders above in update.rb, simply create a new pipeline for the imported repo. Use the `azure-pipelines.yaml` as the source for the pipeline.
 
 When the pipeline is run, `YOUR_REPO` will be analysed and PRs will be created for any out-of-date packages.
 
-## Running locally in Docker
+## Running in Azure DevOps Pipelines (npm with azure artifacts registry)
+
+After replacing the placeholders abovein update-npm.rb, simply create a new pipeline for the imported repo. Use the `azure-pipelines-npm.yaml` as the source for the pipeline.
+You can remove the `npm_registry` credential if your project use the npm registry and not azure artifacts.
+
+When the pipeline is run, `YOUR_REPO` will be analysed and PRs will be created for any out-of-date packages.
+
+## Running locally in Docker (nuget)
 
 In addition to the placeholders above, replace the following: 
 
