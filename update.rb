@@ -2,6 +2,7 @@ require "dependabot/omnibus"
 
 package_manager = "nuget"
 repo = "YOUR_ORG/YOUR_PROJECT/_git/YOUR_REPO"
+directory = "."
 
 credentials = [{
   "type" => "git_source",
@@ -17,6 +18,7 @@ credentials = [{
 source = Dependabot::Source.new(
   provider: "azure",
   repo: repo,
+  directory: directory
 )
 
 fetcher = Dependabot::FileFetchers.for_package_manager(package_manager).new(
