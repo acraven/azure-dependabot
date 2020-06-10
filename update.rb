@@ -9,6 +9,11 @@ credentials = [{
   "username" => "",
   "password" => ENV["SYSTEM_ACCESSTOKEN"]
 },{
+  "type" => "git_source",
+  "host" => "github.com",
+  "username" => "x-access-token",
+  "password" => ENV["GITHUB_ACCESS_TOKEN"] # A GitHub access token with read access to public repos
+},{
   "type" => "nuget_feed",
   "url" => "https://pkgs.dev.azure.com/YOUR_ORG/_packaging/YOUR_FEED/nuget/v3/index.json",
   "token" => ":#{ENV["SYSTEM_ACCESSTOKEN"]}"
